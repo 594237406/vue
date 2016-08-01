@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+</div>
+<script>
+    var vm = new Vue({
+        data:{
+            message:'hello'
+        },
+        created() {
+            console.log('创建');
+        },
+        beforeCompile(){
+            console.log('编译前');
+        },
+        compiled(){
+            console.log('编译完成');
+        },
+        ready(){
+            console.log("准备好了");
+        },
+        beforeDestroy(){
+            console.log("销毁前");
+        },
+        destroyed(){
+            console.log("销毁");
+        }
+    });
+    //手动挂载 指定el元素
+    vm.$mount('#app');
+    //销毁需要调用$destroy
+    vm.$destroy();
+</script>
+</body>
+</html>

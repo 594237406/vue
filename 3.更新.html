@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Vue.js Modal Example</title>
+    <script src="bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+<div class="app">
+    {{message.name||'hello'}}
+    {{message.age}}
+</div>
+<script>
+    let data={
+        message:{
+            name:'lhj'
+        }
+    };
+
+    //vm  $scope MVVM model view view model
+    var vm =new Vue({
+        el:'.app',
+        data
+    });
+
+    vm.message.name='lihongji';
+    vm.message.age=35;
+</script>
+</body>
+</html>

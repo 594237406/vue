@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Vue.js Modal Example</title>
+    <script src="bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+<div class="app">
+    <!--ng-model -->
+    <input v-model="message"><br/>
+    <!-- 支持三元表达式和与非操作 -->
+    {{message||'hello'}}<br/>
+    <!-- 只绑定一次 视图变化时不改变 -->
+    {{*message}}<br/>
+    <!--angular $sce.trustAs-->
+    {{{message}}}
+    <!--识别html标签-->
+</div>
+<script>
+    //vm  $scope MVVM model view view model
+    var vm =new Vue({
+        el:'.app',
+        data:{
+            message:'<h1>Hello</h1>'
+        }
+    })
+</script>
+</body>
+</html>
