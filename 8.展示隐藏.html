@@ -11,25 +11,24 @@
 </head>
 <body>
 <div id="app">
-    <!--template标签是不会被渲染的-->
-    <!--<template v-if="false">
+    <!--template标签是不会被渲染的:只会渲染模板内的内容-->
+    <template v-if="true">
         <div>
             hello
         </div>
         <div>
             world
         </div>
-    </template>-->
+    </template>
     <!--else 要跟在v-if后面，也可以跟在v-show后面-->
 
     <!--v-show不支持template语法-->
-    <template v-show="true">123</template>
-    <div v-else>
-        i love you
-    </div>
-    <!--<div v-show="false">
+    <template v-show="false">
+        123
+    </template>
+    <div v-show="true">
         hello
-    </div>-->
+    </div>
 </div>
 <script src="bower_components/vue/dist/vue.js"></script>
 <script>
